@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Estandar";
+  src: url("../fnt/Estandar-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: "Estandar";
+  font-size: 15px;
+  line-height: 1;
+  padding:0;
+  margin:0;
+  background: url(../img/bg.png) no-repeat center;
+  background-color: #1e1e1e;
+  background-size: auto;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.row > div {
+  margin-bottom: 10px;
+}
+
+.container{
+  font-size: 15px;
+  width: 80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+header{
+  padding-top: 30px;
+  min-height: 70px;
+  color:#ffffff;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 16px
+}
+
+header ul{
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+header li{
+  float: left;
+  padding: 0 20px 0 20px;
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    text-align: left;
+    position: fixed;
+}
+
+header #logo{
+  position: absolute;
+  left: 32px;
+  top:20px;
+}
+
+header #logo h1{
+  margin: 0;
+}
+
+li a.active{
+  color: #43e1e1;
+}
+
+header nav {
+  position: absolute;
+  right: 32px;
+  top: 40px;
+}
+
+header a:hover{
+  color: #ff03fd;
+  text-decoration: line-through;
+}
+
+section {
+  color: #ffffff
+}
+
+#news{
+  bottom: 600px: ;
+}
+
+#projects{
+padding:80px;
+
+transform: translate(-50%, -50%)
+-webkit-animation: fadein 4s;
+/* Safari, Chrome and Opera > 12.1 */
+
+-moz-animation: fadein 4s;
+/* Firefox < 16 */
+
+-ms-animation: fadein 4s;
+/* Internet Explorer */
+
+-o-animation: fadein 4s;
+/* Opera < 12.1 */
+
+animation: fadein 4s;
+}
+
+.row{
+  background: rgba(17, 17, 17,0.7);
+  border-radius: 16px;
+}
+
+#projects img{
+  width:70px;
+  margin-top: 15px;
+  opacity: 1;
+}
+
+#projects h3{
+  margin-left: 30px;
+}
+
+#projects p{
+ margin-left: 30px;
+}
+
+#projects a{
+  color: #00ffff;
+  text-decoration: none;
+}
+
+#projects a:hover{
+  color: #ff03fd;
+}
+
+/*Fade in */
+.center {
+    font-size: 20px;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    margin: 0 auto;
+    position: relative;
+
+    transform: translate(-50%, -50%)
+    -webkit-animation: fadein 4s;
+    /* Safari, Chrome and Opera > 12.1 */
+
+    -moz-animation: fadein 4s;
+    /* Firefox < 16 */
+
+    -ms-animation: fadein 4s;
+    /* Internet Explorer */
+
+    -o-animation: fadein 4s;
+    /* Opera < 12.1 */
+
+    animation: fadein 4s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

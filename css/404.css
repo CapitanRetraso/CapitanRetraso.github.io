@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Estandar";
+  src: url("../fnt/Estandar-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: "Estandar";
+  font-size: 16px;
+  line-height: 1;
+  padding:0;
+  margin:0;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+a{
+  color: #FF00FF;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: line-through;
+}
