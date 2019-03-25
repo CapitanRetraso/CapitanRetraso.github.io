@@ -2,37 +2,255 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <meta name="author" content="Capitán Retraso">
-    <title>Capitán Retraso | Home</title>
-    <link rel="shortcut icon" href="./img/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christopher">
+    <title>Capitán Retraso</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/gif" >
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/mors.min.js"></script>
+    <script>
+
+    function crash(){
+      window.location.replace("404.html")
+    }
+
+    function taskbarContact() {
+    var x = document.getElementById("window2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+
+    function taskbarProjectList() {
+    var x = document.getElementById("window1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+
+    function taskbarStartMenu() {
+    var x = document.getElementById("taskbar-startmenu");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        $('#start-button').addClass('button-active');
+    } else {
+        x.style.display = "none";
+        $('#start-button').removeClass('button-active');
+    }
+    }
+
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      m = checkTime(m);
+      document.getElementById('clock').innerHTML =
+      h + ":" + m;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    </script>
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="logo">
-          <h1>Capitán Retraso</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a>
-          <li><a href="projects.html">Projects</a>
-          <li><a href="about.html">About</a>
-          <li><a href="contact.html">Contact</a>
-        </ul>
-      </nav>
-    </header>
-    <section id="news">
-      <div class="center" align="center">
-        <br><br><br><br><br><br><br>
-        <h1>News</h1>
-        <p>Site under construction</p>
-      </div>
-    </section>
+  <body onload="startTime()">
     <script src="./js/jquery.js"></script>
+
+<!--BIOS BOOT-->
+    <div class="bios" id="bios" style="display: block">
+      <div class="manufacturer">
+        <img src="img/AM-logo.png">
+        <p>Released: 12/01/94 <br>AMBIOS (C)1994 American Megatrends, Inc.</p>
+      </div>
+      <div class="info">
+        <p>Main Processor: AMD Athlon(tm) 64 Processor 4000+<br>
+        Memory Testing: 2097152K OK(Installed Memory: 2097152K)<br>
+        Memory information: DDR 400 Dual Channel, 128-bit</p>
+        <p class= "info2">Chipset Model: nForce 4<br>
+        Primary IDE Master &nbsp&nbsp&nbsp: PLEXTOR DVDR &nbsp&nbsp PX-716AL 1.02<br>
+        Primary IDE Slave &nbsp&nbsp&nbsp&nbsp: None<br>
+        Secondary IDE Master &nbsp: CD-W524E 1.0E<br>
+        Secondary IDE Slave &nbsp&nbsp: None</p>
+      </div>
+    </div>
+
+<!--DESKTOP ICONS-->
+    <div class="desktop-icon" id="cake" ondblclick="crash()">
+      <img class="icon" src="img/cake.png" width="64px">
+      <img class="shortcut" src="img/shortcut.png" width="48px" id="shortcut">
+      <center><p>Free Cake</p></center>
+    </div>
+
+<!--VAPORWAVE WINDOWS-->
+
+      <div class='vaporwave' id="window1">
+          <div class='resizable window center-it'>
+            <div class='header'>
+              <img class='icon' src='img/exe.gif'/>
+                Project List
+              <button class='minimize' onclick="taskbarProjectList()"></button>
+            </div>
+            <div class='content'>
+              <center>
+                <div class="media">
+                     <div class="pull-left">
+                       <img src="./img/ultimate smasher.png"></img>
+                     </div>
+                     <div class="media-body">
+                         <h5 class="media-heading">Ultimate Smasher</h5>
+                         <p>Super Smash Bros. Ultimate (Nintendo Switch) save editor<br><br>
+                           <a href="https://github.com/CapitanRetraso/Ultimate-Smasher/releases/download/1.2.1/Ultimate.Smasher.v1.2.1.zip">v1.2.1</a> |
+                           <a href="https://github.com/CapitanRetraso/Ultimate-Smasher/releases/download/1.2/Ultimate.Smasher.v1.2.zip">v1.2</a> |
+                           <a href="https://github.com/CapitanRetraso/Ultimate-Smasher/releases/download/1.1/Ultimate.Smasher.v1.1.zip">v1.1</a> |
+                           <a href="https://github.com/CapitanRetraso/Ultimate-Smasher/releases/download/1.0/Ultimate.Smasher.zip">v1.0</a> |
+                           <a href="https://github.com/CapitanRetraso/Ultimate-Smasher">Source</a>
+                     </div>
+                 </div>
+                 <div class="media">
+                     <div class="pull-left">
+                       <img src="./img/retrasobot.png"></img>
+                     </div>
+                     <div class="media-body">
+                         <h5 class="media-heading">RetrasoBot</h5>
+                         <p>A Twitch.tv bot that sends keystrokes based on chat commands<br><br>
+                         <a href="https://github.com/CapitanRetraso/RetrasoBot/archive/v1.0.zip">v1.0</a> |
+                         <a href="https://github.com/CapitanRetraso/RetrasoBot">Source</a>
+                       </div>
+                   </div>
+                   <div class="media">
+                       <div class="pull-left">
+                         <img src="./img/ets2.png"></img>
+                       </div>
+                       <div class="media-body">
+                           <h5 class="media-heading">ETS2 Trainer</h5>
+                           <p>A simple trainer for Euro Truck Simulator 2 (x86)<br><br>
+                           <a href="https://github.com/CapitanRetraso/Euro-Truck-Simulator-2-Trainer/releases/download/v0.2/Euro.Truck.Simulator.2.x86.Trainer.v0.2.exe">v0.2</a> |
+                           <a href="https://github.com/CapitanRetraso/Euro-Truck-Simulator-2-Trainer/releases/download/v0.1/Euro.Truck.Simulator.2.x86.Trainer.v0.1.exe">v0.1</a> |
+                           <a href="https://github.com/CapitanRetraso/Euro-Truck-Simulator-2-Trainer">Source</a>
+                         </div>
+                     </div>
+              </center>
+            </div>
+          </div>
+        </div>
+
+
+        <div class='vaporwave' id="window2" style="display:none;">
+            <div class='resizable window center-it'>
+              <div class='header'>
+                <img class='icon' src='img/user.png'/>
+                  Contact
+                <button class='minimize' onclick="taskbarContact()"></button>
+              </div>
+              <div class='content'>
+                <div class="media">
+                  <div class="pull-left">
+                    <a href="mailto:capitanretraso@gmail.com">
+                    <img src="./img/gmail.png"></img>
+                    </a>
+                  </div>
+                  <center>
+                      <p>capitanretraso@gmail.com</p>
+                  </center>
+                </div>
+                  <div class="media">
+                    <div class="pull-left">
+                      <a href="https://github.com/capitanretraso">
+                      <img src="./img/github.svg"></img>
+                      </a>
+                    </div>
+                    <center>
+                        <p style="margin-top:25px;">CapitanRetraso</p>
+                    </center>
+                  </div>
+                    <div class="media">
+                      <div class="pull-left">
+                        <a href="https://twitter.com/CptnRetraso">
+                        <img src="./img/twitter.png"></img>
+                        </a>
+                      </div>
+                      <center>
+                          <p style="margin-top:25px;">@CptnRetraso</p>
+                      </center>
+                    </div>
+                      <div class="media">
+                        <div class="pull-left">
+                          <img src="./img/discord.png"></img>
+                        </div>
+                        <center>
+                            <p style="margin-top:25px;">Capitán Retraso#8110</p>
+                        </center>
+                      </div>
+              </div>
+            </div>
+        </div>
+
+
+        <div class='taskbar-startmenu' id=taskbar-startmenu style="display:none;">
+
+            <div class='startmenugraybox'>
+            <p>Capitán Retraso</p>
+            </div>
+            <div class='startmenubutton'>
+              <button id="projectsbutton" onclick="taskbarProjectList()"><img class='icon' src='img/program.png'/> <u>P</u>rojects</button>
+              <button id="contactbutton" onclick="taskbarContact()"><img class='icon' src='img/user.png'/> <u>C</u>ontact</button>
+            </div>
+
+        </div>
+
+
+
+      <script src="./js/jquery-ui.js"></script>
+
+      <footer>
+        <div class='taskbar' id="taskbar">
+              <div class='start-button'>
+                <button class='start-button' id="start-button" onclick="taskbarStartMenu()"><img class='icon' src='img/start.png'/> Start</button>
+              </div>
+              <div class='task-projectlist'>
+                <button onclick="taskbarProjectList()"><img class='icon' src='img/exe.gif'/> Project List</button>
+              </div>
+              <div class='task-contact'>
+                <button onclick="taskbarContact()"><img class='icon' src='img/user.png'/> Contact</button>
+              </div>
+                <button type="button" disabled id="clock"></button>
+
+          </div>
+      </footer>
+      <script>
+      $( function() {
+        $( "#window2" ).draggable();
+        $( "#window1" ).draggable();
+        $( "#cake" ).draggable();
+      } );
+      </script>
+
+      <script>
+      $(document).mouseup(function(e){
+      var container = $("#taskbar-startmenu");
+      var startbutton = $("#start-button")
+      if (!container.is(e.target) && container.has(e.target).length === 0 && !startbutton.is(e.target)){
+          container.hide();
+          $('#start-button').removeClass('button-active');
+
+        }
+      });
+      </script>
+      <script>
+        $(document).ready(function () {
+          setTimeout(function () {
+              $('#bios').hide();
+              var audio = new Audio('snd/startup.mp3');
+              audio.play();
+          }, 2000);
+        });
+      </script>
+    <script src="./js/jquery-ui.js"></script>
     <script src="./js/bootstrap.min.js"></script>
   </body>
-</html>
+<html>

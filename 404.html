@@ -6,20 +6,28 @@ permalink: /404.html
 <html lang="en" >
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>404</title>
         <link rel="shortcut icon" href="./img/favicon.ico"/>
         <link rel="stylesheet" href="css/404.css">
     </head>
     <body>
-        <div class="center" align="center">
-            <canvas height="300" width="700" id="canvas"></canvas>
-            <h1>Are you sure this is where you wanted to be?</h1>
-            <br>
-            <h2>Probably not.<br><br></h2>
-            <p>You should consider going <br><a href="index.html">home</a></p>
-        </div>
+      <script>
+        document.onclick = function() {
+        window.location.href = "index.html";};
+
+        document.onkeypress = function() {
+        window.location.href = "index.html";};
+      </script>
+            <p class="background-text">404</p>
+
+            <p>A fatal exception 0E has occurred at 0028:C002ADB8 in VXD VFAT(01) +
+                0000A3D8. <br>The current application will be terminated.</p>
+            <p>*  I don't know what you did to get here but don't want to know it either.<br>
+                *  Press random shit on your keyboard to restart or something. You are <br>
+                   &nbsppretty much fucked at this point mate, just try stuff.</p>
+
+            <p class="inline-centered"> Press any key to continue&nbsp<a class="cursor">_</a></p>
+
         <script src="./js/jquery.js"></script>
-        <script  src="./js/404.js"></script>
     </body>
 </html>
